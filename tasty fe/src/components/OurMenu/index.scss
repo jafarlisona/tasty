@@ -1,0 +1,187 @@
+#menu {
+  background-color: #fafafa;
+  padding: 80px 0;
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #00000033;
+    }
+    h1 {
+      line-height: 2;
+      color: #404044;
+      font-size: 36px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .category-btn {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      margin: 80px 0 0;
+      justify-content: center;
+      button {
+        border: none;
+        background-color: white;
+        color: #8b8b92;
+        font-size: 14px;
+        padding: 25px 30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        font-weight: bold;
+        transition: all 300ms;
+        height: max-content;
+        i {
+          font-size: 17px;
+          margin-right: 8px;
+          display: inline-block;
+        }
+        &:hover {
+          background-color: #ffb400;
+          color: #404044;
+          padding: 30px 30px 25px;
+        }
+        &:focus {
+          background-color: #ffb400;
+          color: #404044;
+          padding: 30px 30px 25px;
+        }
+      }
+    }
+    .cards {
+      padding: 40px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 25px;
+      .card {
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        display: flex;
+        align-items: start;
+        padding: 15px;
+        justify-content: space-between;
+        gap: 15px;
+        transition: all 400ms;
+        &:hover {
+          background-color: #ffb400;
+        }
+        &:hover .text p {
+          color: #404044;
+        }
+        .img {
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          flex-grow: 2;
+          h3 {
+            font-weight: 400;
+            font-size: 18px;
+            color: #404044;
+          }
+          p {
+            color: #8b8b92;
+          }
+        }
+        .price {
+          span {
+            color: #404044;
+            font-size: 28px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .ending {
+      text-align: center;
+      color: #8b8b92;
+      font-size: 14px;
+    }
+    a {
+      color: #ffb400;
+      border: 2px solid #ffb400;
+      background-color: transparent;
+      transition: 400ms all;
+      padding: 18px 10px;
+      font-size: 15px;
+      display: block;
+      margin: 20px auto;
+      width: max-content;
+      &:hover {
+        background-color: #ffb400;
+        color: #404044;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+  #menu {
+    .container {
+      h1 {
+        font-size: 32px;
+      }
+      .category-btn {
+        margin: 60px 0 0;
+      }
+      .cards {
+        padding: 40px 60px;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 300px) {
+  #menu {
+    .container {
+      h1 {
+        font-size: 32px;
+      }
+      .category-btn {
+        margin: 60px 15px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: start;
+        flex-direction: column;
+        button {
+          width: 100%;
+          padding: 25px 0;
+        }
+      }
+      .cards {
+        padding: 30px 15px;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+        .card {
+          min-height: 130px;
+          .img {
+            width: 55%;
+          }
+          .text {
+            width: 100%;
+          }
+          .price {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
